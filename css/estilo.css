@@ -139,6 +139,9 @@ body{
   }
 
   @media (max-width: 768px) {
+   .cartas-contenedor{
+    margin: 0.5rem;
+   }
     .carta-medida{
         width: 15rem;
         height: 10rem;
@@ -146,7 +149,7 @@ body{
 
     .imagen{
         width: 10rem;
-        padding: 20px;
+        padding: 10px;
     }
 
     .texto-final{
@@ -167,10 +170,23 @@ body{
       }
 
       
-.bichito{
-    margin: 0;
-    width: 30%;
-}
+    .bichito{
+        margin: 0;
+        width: 30%;
+    }
+
+    .btn-contenedor{
+        width: auto;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn{
+        height: 22px;
+    }
 
   }
 
