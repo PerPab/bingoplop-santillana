@@ -50,7 +50,7 @@ export function animacionFlip(numeroAleatorio) {
         if (numeroAleatorio != undefined) {
             carta.innerHTML = `<div class="carta"><img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG"></div>`
         } else {
-            carta.innerHTML = `<div class="carta carta-final"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">No quedan cartas en el mazo!</p></div>`
+            carta.innerHTML = `<div class="carta carta-final"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">¡No quedan cartas en el mazo!</p></div>`
             setTimeout(() => {
                 animacionTerminar();
             }, 2000);
