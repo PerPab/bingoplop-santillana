@@ -9,6 +9,10 @@ function playTada() {
     document.getElementById('tada').play();
 }
 
+function playCartoon() {
+    document.getElementById('cartoon').play();
+}
+
 export function cargarLista() {
     listaIndices = [];
     for (let i = 0; i <= 2; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
@@ -31,6 +35,7 @@ export function shakeY() {
 export function animacionTerminar() {
     setTimeout(() => {
         document.getElementById('btn-girar').setAttribute('disabled', 'true');
+        playCartoon();
         carta.classList.add('animate__animated', 'animate__hinge')
     }, 1000);
     setTimeout(() => {
