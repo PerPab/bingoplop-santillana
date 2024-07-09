@@ -26,8 +26,8 @@ html, body{
 }
 
 .carta{
-    width: 15rem;
-    height: 20rem;
+    width: 16rem;
+    height: 22rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -36,8 +36,8 @@ html, body{
 }
 
 .parte-atras{
-        width: 15rem;
-        height: 20rem;
+    width: 16rem;
+    height: 22rem;
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -65,20 +65,60 @@ html, body{
 
 }
 
+.btn{
+    transition: transform 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
 .imagen{
     width: 17rem;
     padding: 20px;
 }
 
 .invisible{
-    display: none;
+    visibility:hidden
 }
 
+.bichito{
+    width: 60%;
+}
+
+.carta-final{
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 22rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.texto-final{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    text-shadow: 
+    2px 2px 0px black,
+    -2px 2px 0px black,
+    2px -2px 0px black,
+    -2px -2px 0px black,
+    2px 0px 0px black,
+    -2px 0px 0px black,
+    0px 2px 0px black,
+    0px -2px 0px black;
+  }
 
 @media only screen and (min-width: 1024px) {
 
     .carta{
-        width: 16rem;
+        width: 17rem;
         height: 22rem;
         border-radius: 20px;
         display: flex;
@@ -88,7 +128,7 @@ html, body{
     }
 
     .parte-atras{
-        width: 16rem;
+        width: 17rem;
         height: 22rem;
         border-radius: 20px;
         display: flex;
@@ -115,7 +155,44 @@ html, body{
 
     .bichito{
         width: 60%;
-       
     }
+
+    .carta-final{
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 22rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .texto-final{
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 1rem;
+        color: white;
+        text-shadow: 
+        2px 2px 0px black,
+        -2px 2px 0px black,
+        2px -2px 0px black,
+        -2px -2px 0px black,
+        2px 0px 0px black,
+        -2px 0px 0px black,
+        0px 2px 0px black,
+        0px -2px 0px black;
+      }
+
+    .btn{
+        transition: transform 0.3s ease;
+    }
+    .btn:hover{
+        transform: scale(1.05);
+    }
+    
     
 }

@@ -11,7 +11,7 @@ function playTada() {
 
 export function cargarLista() {
     listaIndices = [];
-    for (let i = 0; i <= 17; i++) {
+    for (let i = 0; i <= 4; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
 }
@@ -26,18 +26,37 @@ export function shakeY() {
     }, 1000);
 
     //carta.innerHTML = '';
-    carta.innerHTML = `<img id='img' class='imagen bichito' src="./img/bichito.png">`;
+    carta.innerHTML = `<img id='img-bicho' class='bichito' src="./img/bichito.png">`;
+}
+
+export function animacionTerminar() {
+    setTimeout(() => {
+        document.getElementById('btn-girar').setAttribute('disabled', 'true');
+        carta.classList.add('animate__animated', 'animate__hinge')
+    }, 1000);
+    setTimeout(() => {
+        carta.classList.remove('animate__animated', 'animate__hinge')
+        carta.classList.add('invisible');
+    }, 3000);
+
 }
 
 
 export function animacionFlip(numeroAleatorio) {
     setTimeout(() => {
-        carta.innerHTML = `<img id='img' class='imagen bichito' src="./img/bichito.png">`;
+        carta.innerHTML = `<img id='img-bicho' class='bichito' src="./img/bichito.png">`;
         carta.classList.add('animate__animated', 'animate__flip');
     }, 100);
     setTimeout(() => {
         carta.classList.remove('animate__animated', 'animate__flip');
-        carta.innerHTML = `<div class="carta"><img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG"></div>`
+        if (numeroAleatorio != undefined) {
+            carta.innerHTML = `<div class="carta"><img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG"></div>`
+        } else {
+            carta.innerHTML = `<div class="carta carta-final"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">No quedan cartas en el mazo</p></div>`
+            setTimeout(() => {
+                animacionTerminar();
+            }, 2000);
+        }
     }, 1100);
     setTimeout(() => {
         carta.classList.add('animate__animated', 'animate__tada');
@@ -52,7 +71,6 @@ export function animacionFlip(numeroAleatorio) {
 //animate__hinge
 export function obtenerNumeroAleatorio() {
     if (listaIndices.length === 0) {
-        console.log("Todos los números han sido seleccionados.");
         return null;
     }
     let indiceAleatorio = Math.floor(Math.random() * listaIndices.length);
@@ -66,8 +84,10 @@ export function obtenerNumeroAleatorio() {
 
 export function recargarLista() {
     carta.innerHTML = '';
+    carta.classList.remove('invisible');
+    document.getElementById('btn-girar').removeAttribute('disabled');
     listaIndices = [];
-    for (let i = 0; i <= 17; i++) {
+    for (let i = 0; i <= 4; i++) {  /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
     shakeY();
