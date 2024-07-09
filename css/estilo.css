@@ -9,13 +9,15 @@ html, body{
     align-items: center;
     justify-content: space-evenly;
     height: 100vh;
-    background-color: #9D177F;
+    /*background-color: #9D177F;*/
+    background: rgb(166,83,155);
+    background: radial-gradient(circle, rgba(166,83,155,1) 0%, rgba(157,23,127,1) 48%);
     overflow: hidden;
 }
 
 .cartas-contenedor{
     width: 100%;
-    background-color: #9D177F;
+    /*background-color: #9D177F;*/
     padding: 0;
     display: flex;
     flex-direction: column;
