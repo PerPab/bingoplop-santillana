@@ -14,7 +14,7 @@ function comienzo() {
     animacionFlip(numeroAleatorio);
     setTimeout(() => {
         btn_mostrar.removeAttribute('disabled')
-    }, 2000);
+    }, 3000);
 
 }
 
