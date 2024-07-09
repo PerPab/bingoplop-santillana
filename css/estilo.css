@@ -1,6 +1,7 @@
 html, body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 
 
 }
@@ -13,7 +14,7 @@ body{
     height: 100vh;
     background: rgb(166,83,155);
     background: radial-gradient(circle, rgba(166,83,155,1) 0%, rgba(157,23,127,1) 48%);
-    overflow: hidden;
+    
 }
 
 .carta-medida{
