@@ -11,7 +11,7 @@ function playTada() {
 
 export function cargarLista() {
     listaIndices = [];
-    for (let i = 0; i <= 4; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
+    for (let i = 0; i <= 2; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
 }
@@ -25,7 +25,6 @@ export function shakeY() {
         carta.classList.remove('animate__animated', 'animate__shakeY');
     }, 1000);
 
-    //carta.innerHTML = '';
     carta.innerHTML = `<img id='img-bicho' class='bichito' src="./img/bichito.png">`;
 }
 
@@ -41,7 +40,6 @@ export function animacionTerminar() {
 
 }
 
-
 export function animacionFlip(numeroAleatorio) {
     setTimeout(() => {
         carta.innerHTML = `<img id='img-bicho' class='bichito' src="./img/bichito.png">`;
@@ -52,7 +50,7 @@ export function animacionFlip(numeroAleatorio) {
         if (numeroAleatorio != undefined) {
             carta.innerHTML = `<div class="carta"><img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG"></div>`
         } else {
-            carta.innerHTML = `<div class="carta carta-final"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">No quedan cartas en el mazo</p></div>`
+            carta.innerHTML = `<div class="carta carta-final"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">No quedan cartas en el mazo!</p></div>`
             setTimeout(() => {
                 animacionTerminar();
             }, 2000);
@@ -68,7 +66,6 @@ export function animacionFlip(numeroAleatorio) {
     }, 2100);
 }
 
-//animate__hinge
 export function obtenerNumeroAleatorio() {
     if (listaIndices.length === 0) {
         return null;
@@ -80,54 +77,14 @@ export function obtenerNumeroAleatorio() {
     return numeroSeleccionado;
 }
 
-
-
 export function recargarLista() {
     carta.innerHTML = '';
     carta.classList.remove('invisible');
     document.getElementById('btn-girar').removeAttribute('disabled');
     listaIndices = [];
-    for (let i = 0; i <= 4; i++) {  /// rellena la lista de numeros, se usan para llamar a las imagenes
+    for (let i = 0; i <= 15; i++) {  /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
     shakeY();
 }
 
-/**export function animacionTada() {
-    carta.addEventListener('animationend', () => {
-        document.getElementById('tada').play();
-        carta.classList.add('animate__animated', 'animate__tada')
-    })
-} */
-
-
-
-/**export function animacionFlip(numeroAleatorio) {
-    carta.classList.add('animate__animated', 'animate__flip')
-    setTimeout(() => {
-        animacionTada()
-    }, 1000);
-    carta.addEventListener('animationend', () => {
-        carta.classList.remove('animate__animated', 'animate__flip')
-        carta.innerHTML = `<img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG">`
-    })
-} */
-
-
-
-/********************************************************** 
- * export function animacionFlip(numeroAleatorio) {
-    carta.classList.add('animate__animated', 'animate__flip')
-    carta.addEventListener('animationend', () => {
-        carta.classList.remove('animate__animated', 'animate__flip')
-        carta.innerHTML = `<img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG">`
-    })
-    animacionTada()
-}
-
-export function animacionTada() {
-    carta.addEventListener('animationend', () => {
-        document.getElementById('tada').play()
-        carta.classList.add('animate__animated', 'animate__tada')
-    })
-}*/

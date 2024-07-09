@@ -22,6 +22,7 @@ html, body{
     align-items: center;
     justify-content: center;
     margin: 2rem;
+    
     /*overflow: hidden;*/
 }
 
@@ -43,6 +44,7 @@ html, body{
         align-items: center;
         justify-content: center;
         background-color: #f7f292;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-contenedor{
@@ -95,12 +97,14 @@ html, body{
     align-items: center;
     justify-content: center;
     background-color: white;
+    
 }
+
 
 .texto-final{
     font-size: 1rem;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 1rem;
     color: white;
@@ -125,6 +129,7 @@ html, body{
         align-items: center;
         justify-content: center; 
         background-color: white;
+    
     }
 
     .parte-atras{
@@ -135,6 +140,8 @@ html, body{
         align-items: center;
         justify-content: center;
         background-color: #f7f292;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        
 }
 
     .imagen{
@@ -167,12 +174,13 @@ html, body{
         align-items: center;
         justify-content: center;
         background-color: white;
+       
     }
 
     .texto-final{
         font-size: 1rem;
         font-weight: bold;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         padding: 1rem;
         color: white;
