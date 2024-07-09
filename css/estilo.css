@@ -140,7 +140,8 @@ body{
 
   @media (max-width: 768px) {
    .cartas-contenedor{
-    margin: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
    }
     .carta-medida{
         width: 15rem;
@@ -186,6 +187,10 @@ body{
 
     .btn{
         height: 22px;
+    }
+
+    body{
+        height: auto;
     }
 
   }
