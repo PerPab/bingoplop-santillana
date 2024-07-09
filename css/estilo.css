@@ -1,0 +1,121 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: #9D177F;
+    overflow: hidden;
+}
+
+.cartas-contenedor{
+    width: 100%;
+    background-color: #9D177F;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    /*overflow: hidden;*/
+}
+
+.carta{
+    width: 15rem;
+    height: 20rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.parte-atras{
+        width: 15rem;
+        height: 20rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f292;
+}
+
+.btn-contenedor{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.btn-girar{
+    margin: 0.5rem;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #DB88B9;
+    cursor: pointer;
+    color: #F3F7EC;
+    border: 3px solid #F3F7EC ;
+
+}
+
+.imagen{
+    width: 17rem;
+    padding: 20px;
+}
+
+.invisible{
+    display: none;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .carta{
+        width: 16rem;
+        height: 22rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        background-color: white;
+    }
+
+    .parte-atras{
+        width: 16rem;
+        height: 22rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f292;
+}
+
+    .imagen{
+        width: 20rem;
+        padding: 20px;
+    }
+    .btn-girar{
+        margin: 0.5rem;
+        width: 8rem;
+        height: 3rem;
+        border-radius: 15px;
+        cursor: pointer;
+        color: #F3F7EC;
+        font-weight: bold;
+        border: 3px solid #F3F7EC ;
+    
+    }
+
+    .bichito{
+        width: 60%;
+       
+    }
+    
+}
